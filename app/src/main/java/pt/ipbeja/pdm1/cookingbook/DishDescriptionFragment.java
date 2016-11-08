@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class DishDescriptionFragment extends Fragment {
 
+    int currentPosition;
 
     public DishDescriptionFragment() {
         // Required empty public constructor
@@ -29,19 +31,19 @@ public class DishDescriptionFragment extends Fragment {
 
 
 
-//    @Override public void onStart() {
-//        super.onStart();
-//        // During startup, check if there are arguments passed to the fragment.
-//        // onStart is a good place to do this because the layout has already been
-//        // applied to the fragment at this point so we can safely call the method
-//        // below that sets the article text.
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            // Set article based on argument passed in
-//            currentPosition = args.getInt("position");
-//            TextView article = (TextView) getActivity().findViewById(R.id.article_text);
-//            article.setText(NewsData.Articles[currentPosition]);
-//        }
-//    }
+    @Override public void onStart() {
+        super.onStart();
+        // During startup, check if there are arguments passed to the fragment.
+        // onStart is a good place to do this because the layout has already been
+        // applied to the fragment at this point so we can safely call the method
+        // below that sets the article text.
+        Bundle args = getArguments();
+        if (args != null) {
+            // Set article based on argument passed in
+            currentPosition = args.getInt("position");
+            TextView description = (TextView) getActivity().findViewById(R.id.txtDishDescription);
+            description.setText(Dish.DishDescription[currentPosition]);
+        }
+    }
 
 }
