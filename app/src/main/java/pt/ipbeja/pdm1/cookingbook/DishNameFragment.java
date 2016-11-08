@@ -39,8 +39,18 @@ public class DishNameFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        Toast.makeText(getActivity().getApplicationContext(), "" + Dish.DishName[position], Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity().getApplicationContext(), "" + Dish.DishName[position], Toast.LENGTH_SHORT).show();
 
-
+        if (getActivity().findViewById(R.id.activity_main) != null){
+            Toast.makeText(getActivity().getBaseContext(), "Clicked Portrait." + Dish.DishName[position],
+                    Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(getActivity().getBaseContext(), "Clicked Landscape." + Dish.DishName[position],
+                    Toast.LENGTH_SHORT).show();
+        }
     }
+
+
+
 }
