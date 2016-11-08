@@ -69,8 +69,8 @@ public class DishNameFragment extends ListFragment {
 
         } else {
 
-            TextView article = (TextView) getActivity().findViewById(R.id.txtDishDescription);
-            article.setText(Dish.DishDescription[position]);
+            TextView description = (TextView) getActivity().findViewById(R.id.txtDishDescription);
+            description.setText(Dish.DishDescription[position]);
         }
     }
 
