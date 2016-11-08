@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Toast.makeText(this, Dish.DishName[0].toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, Dish.DishDescription[0].toString(), Toast.LENGTH_SHORT).show();
+
 
         if (findViewById(R.id.activity_main) != null) {
 
